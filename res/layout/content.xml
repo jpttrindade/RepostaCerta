@@ -1,0 +1,90 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Questao" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        
+		    
+		    
+		<LinearLayout 
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="vertical"
+		    >
+
+
+	        <TextView
+	            android:id="@+id/afirmacao"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Escolha Verdadeiro ou Falso:"
+	            android:textSize="24dp"
+	            android:layout_gravity="center"
+	            android:textAppearance="?android:attr/textAppearanceLarge" />
+	
+	        <TextView
+	            android:id="@+id/textView2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.5"
+	            android:layout_gravity="left"
+	            android:textSize="24dp"
+	            android:textAppearance="?android:attr/textAppearanceLarge" />
+		</LinearLayout>
+        
+        
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+
+            <Button
+                android:id="@+id/verdade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.51"
+                android:text="Verdadeiro" 
+            />
+
+            <Button
+                android:id="@+id/menu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.51"
+                android:text="MENU" 
+                android:onClick="proximaQuestao"/>
+			
+            <Button
+                android:id="@+id/falso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.51"
+                android:text="Falso" 
+                />
+            
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

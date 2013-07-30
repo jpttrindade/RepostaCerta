@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent" >
+
+<FrameLayout
+android:id="@+id/frame"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView3"
+            android:layout_gravity="right|bottom"
+            android:src="@drawable/prt3"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PARABÊNS, VOCÊ VENCEU!"
+            android:id="@+id/textView"
+            android:layout_gravity="center|right"
+            android:gravity="center|center_vertical|center_horizontal"
+            android:textSize="30sp"
+            android:textIsSelectable="true"/>
+
+</FrameLayout>
+
+    <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_gravity="center_horizontal|bottom"/>
+
+</LinearLayout>
