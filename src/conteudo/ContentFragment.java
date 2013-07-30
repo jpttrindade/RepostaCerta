@@ -17,7 +17,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -61,7 +61,7 @@ public class ContentFragment extends Fragment {
 			iniciaVariaveis(inflater, container, savedInstanceState);
 			atualizar(lista_afirmacoes.get(quest_atual));
 
-			Button bt_verdade = (Button) view.findViewById(R.id.verdade);
+			ImageButton bt_verdade = (ImageButton) view.findViewById(R.id.verdade);
 			bt_verdade.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -69,7 +69,7 @@ public class ContentFragment extends Fragment {
 				};
 			});
 
-			Button bt_falso = (Button) view.findViewById(R.id.falso);
+			ImageButton bt_falso = (ImageButton) view.findViewById(R.id.falso);
 			bt_falso.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -106,7 +106,7 @@ public class ContentFragment extends Fragment {
 
 		fm = getFragmentManager();
 		Fragment frag = fm.findFragmentByTag("menu_principal");
-
+        ((TextView) view.findViewById(R.id.titulo_nivel)).setText("Nivel " + nivel.getIntNivel());
 		icons = new ImageView[]{
                 (ImageView)((Menu_Principal_Fragment)frag).getList().getChildAt(nivel.getIntNivel()-1).findViewById(R.id.bt_1),
                 (ImageView)((Menu_Principal_Fragment)frag).getList().getChildAt(nivel.getIntNivel()-1).findViewById(R.id.bt_2),

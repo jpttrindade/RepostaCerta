@@ -1,8 +1,8 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Questao" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".Questao" >
 
     <!--
          The primary full-screen view. This can be replaced with whatever view
@@ -16,75 +16,87 @@
          android:fitsSystemWindows.
     -->
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true" >
-
-        
-		    
-		    
-		<LinearLayout 
-		    android:layout_width="fill_parent"
-		    android:layout_height="fill_parent"
-		    android:orientation="vertical"
-		    >
-
-
-	        <TextView
-	            android:id="@+id/afirmacao"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:text="Escolha Verdadeiro ou Falso:"
-	            android:textSize="24dp"
-	            android:layout_gravity="center"
-	            android:textAppearance="?android:attr/textAppearanceLarge" />
-	
-	        <TextView
-	            android:id="@+id/textView2"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="0.5"
-	            android:layout_gravity="left"
-	            android:textSize="24dp"
-	            android:textAppearance="?android:attr/textAppearanceLarge" />
-		</LinearLayout>
-        
-        
-        <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
+    <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent" >
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            android:weightSum="5">
 
-            <Button
-                android:id="@+id/verdade"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.51"
-                android:text="Verdadeiro" 
-            />
 
-            <Button
-                android:id="@+id/menu"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.51"
-                android:text="MENU" 
-                android:onClick="proximaQuestao"/>
-			
-            <Button
-                android:id="@+id/falso"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.51"
-                android:text="Falso" 
-                />
-            
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="2">
+
+
+            <TextView
+                    android:id="@+id/titulo_nivel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_gravity="center"
+                    android:background="@android:drawable/title_bar"
+                    android:clickable="true"/>
+
+            <TextView
+                    android:id="@+id/afirmacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Escolha Verdadeiro ou Falso:"
+                    android:textSize="24dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    style="@android:style/TextAppearance.Holo.Widget.TextView"
+                    android:longClickable="false"
+                    android:textAlignment="center"
+                    android:gravity="center"/>
+
         </LinearLayout>
 
-    </FrameLayout>
 
-</FrameLayout>
+        <LinearLayout
+                android:id="@+id/fullscreen_content_controls"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:weightSum="2">
+
+            <ImageButton
+                    android:id="@+id/verdade"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Verdadeiro"
+                    android:layout_gravity="center"
+                    android:src="@drawable/verd"
+                    android:scaleType="fitCenter"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:clickable="true"/>
+
+
+            <ImageButton
+                    android:id="@+id/falso"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Falso"
+                    android:layout_gravity="center"
+                    android:cropToPadding="false"
+                    android:src="@drawable/falso"
+                    android:scaleType="fitCenter"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:clickable="true"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
